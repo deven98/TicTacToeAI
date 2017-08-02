@@ -6,6 +6,13 @@ board = Board()
 
 ai = AI(100)
 
-ai.iterate(board)
+board.move(1,1)
+board.move(1,2)
+board.move(2,2)
+board.move(2,3)
+board.move(3,3)
+
+if board.isWin() is 1 :
+    print("Won!")
 
 board.displayBoard()

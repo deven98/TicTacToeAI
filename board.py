@@ -12,14 +12,14 @@ class Board:
 
         if self.isEmpty(row-1,column-1):
 
-         self.board[row - 1][column - 1] = self.playerPlaying
-         self.movesPlayed = self.movesPlayed + 1
+            self.board[row - 1][column - 1] = self.playerPlaying
+            self.movesPlayed = self.movesPlayed + 1
 
-         if self.playerPlaying is 1:
-             self.playerPlaying = 2
-         else:
+            if self.playerPlaying is 1:
+                self.playerPlaying = 2
+            else:
 
-             self.playerPlaying = 1
+                self.playerPlaying = 1
         else:
             print("Move invalid")
 

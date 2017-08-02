@@ -13,9 +13,7 @@ class AI:
 
     def iterate(self,Board):
 
-        Board.move(1,1)
-        Board.move(2,2)
-        Board.move(3,3)
+
 
         pass
 
