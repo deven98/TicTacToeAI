@@ -1,4 +1,5 @@
 from OptimalGrid import OptimalGrid
+import os
 
 class OptimalCalc:
 
@@ -14,6 +15,10 @@ class OptimalCalc:
         newList = []
 
         for game in list:
+
+#           Remove comments of the next lines if you want to see the display in action in console!Note:Slows down execution
+            #os.system('cls')
+            #opGrid.displayOptimalGrid()
             newList.append(game[0])
             opGrid.addToGridElement(game[0][0],game[0][1],0.001)
 
