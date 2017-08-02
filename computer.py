@@ -49,7 +49,8 @@ class AI:
         if gameState is 1:
             #print("Win!")
 
-            self.winListPlayer1.append(self.currentGame)
+            if board.playerPlaying is 2:
+                self.winListPlayer1.append(self.currentGame)
 
 
         if gameState is 2:

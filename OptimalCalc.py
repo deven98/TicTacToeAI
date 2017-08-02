@@ -14,7 +14,13 @@ class OptimalCalc:
         for game in list:
             newList.append(game[0])
 
+        from collections import Counter
+
+        c = Counter(newList)
+        print (c.most_common(3))
+
         print(OptimalCalc.most_common(newList))
+        print(newList.__sizeof__())
 
 
     @staticmethod
