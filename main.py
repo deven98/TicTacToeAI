@@ -4,7 +4,7 @@ from computer import AI
 
 board = Board()
 
-ai = AI(80000)
+ai = AI(500000)
 ai.iterate(board)
 
 
