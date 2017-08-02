@@ -1,5 +1,6 @@
 
 from random import randint
+from OptimalCalc import OptimalCalc
 
 class AI:
 
@@ -20,6 +21,9 @@ class AI:
             Board.clearBoard()
             self.gamesPlayed = self.gamesPlayed + 1
 
+
+        OptimalCalc.mostPlayedMove(self.winListPlayer1)
+
 #   Generates random for board move
     def generateRandom(self):
 
@@ -29,6 +33,7 @@ class AI:
     def playGame(self,board):
 
         gameState = 0
+        self.currentGame = []
 
         while gameState is 0:
 
@@ -37,14 +42,16 @@ class AI:
 
             if board.isEmpty(i-1,j-1) is 1:
                 board.move(i,j)
+                self.currentGame.append((i,j))
 
             gameState = board.isWin()
 
         if gameState is 1:
-            print("Win!")
-            board.displayBoard()
+            #print("Win!")
+
+            self.winListPlayer1.append(self.currentGame)
 
 
         if gameState is 2:
-            print("Draw!")
-            board.displayBoard()
+            #print("Draw!")
+            pass

@@ -23,7 +23,7 @@ class Board:
         else:
             print("Move invalid")
 
-
+#   Checks if square is empty
     def isEmpty(self, row, column):
 
         if self.board[row][column] == 0:
@@ -31,10 +31,12 @@ class Board:
         else:
             return 0
 
+#   Returns number of moves played
     def getMovesPlayed(self):
 
         return self.movesPlayed
 
+#   Returns 0 if not win nor draw , 1 if win and 2 if drawn
     def isWin(self):
 
         if (((self.board[0][0] == 1 and self.board[0][1] == 1 and self.board[0][2] == 1) or (self.board[1][0] == 1 and self.board[1][1] == 1 and self.board[1][2] == 1) or (self.board[2][0] == 1 and self.board[2][1] == 1 and self.board[2][2] == 1) or (self.board[0][0] == 1 and self.board[1][1] == 1 and self.board[2][2] == 1) or (self.board[0][0] == 1 and self.board[1][0] == 1 and self.board[2][0] == 1) or (self.board[0][1] == 1 and self.board[1][1] == 1 and self.board[2][1] == 1) or (self.board[0][2] == 1 and self.board[1][2] == 1 and self.board[2][2] == 1))
@@ -50,11 +52,13 @@ class Board:
 
             return 0
 
+#   Displays board on screen
     def displayBoard(self):
 
         for x in self.board:
             print(x)
 
+#   Clears board and resets number of moves played
     def clearBoard(self):
 
         self.board = [[0,0,0],[0,0,0],[0,0,0]]
