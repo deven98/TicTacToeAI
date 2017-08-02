@@ -8,27 +8,38 @@ class OptimalCalc:
 
 
     @staticmethod
-    def mostPlayedMove(list):
+    def mostPlayedMove(winList, lossList):
 
         opGrid = OptimalGrid()
 
-        newList = []
+        formattedWinList = []
 
-        for game in list:
+        formattedLossList = []
 
-#           Remove comments of the next lines if you want to see the display in action in console!Note:Slows down execution
+        for game in winList:
+
+            #Remove comments of the next lines if you want to see the display in action in console!Note:Slows down execution
             #os.system('cls')
             #opGrid.displayOptimalGrid()
-            newList.append(game[0])
+            formattedWinList.append(game[0])
             opGrid.addToGridElement(game[0][0],game[0][1],0.001)
+
+        #for game in lossList:
+
+            #Remove comments of the next lines if you want to see the display in action in console!Note:Slows down execution
+            # os.system('cls')
+            # opGrid.displayOptimalGrid()
+            # formattedLossList.append(game[0])
+            # opGrid.addToGridElement(game[0][0], game[0][1], -0.0005)
+
 
         from collections import Counter
 
-        c = Counter(newList)
+        c = Counter(formattedWinList)
         print (c.most_common(3))
 
-        print(OptimalCalc.most_common(newList))
-        print(newList.__sizeof__())
+        print(OptimalCalc.most_common(formattedWinList))
+        print(formattedWinList.__sizeof__())
 
         opGrid.displayOptimalGrid()
 
